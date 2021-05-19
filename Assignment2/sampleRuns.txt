@@ -1,0 +1,133 @@
+Note: For all sample runs myTest.1 was used as input
+
+================================================ [ FCFS ] ================================================
+
+Scheduling Algorithm: FCFS
+6 total tasks read from "myTest.1". Press 'enter' to start...
+============================================================
+<system time    0>  process    1 is running
+<system time    1>  process    1 is running
+<system time    2>  process    1 is running
+<system time    3>  process    1 is running
+<system time    4>  process    1 is running
+<system time    5>  process    1 has finished......
+<system time    5>  process    2 is running
+<system time    6>  process    2 is running
+<system time    7>  process    2 is running
+<system time    8>  process    2 is running
+<system time    9>  process    2 is running
+<system time   10>  process    2 is running
+<system time   11>  process    2 has finished......
+<system time   11>  process    3 is running
+<system time   12>  process    3 is running
+<system time   13>  process    3 is running
+<system time   14>  process    3 has finished......
+<system time   14>  process    4 is running
+<system time   15>  process    4 has finished......
+<system time   15>  process    5 is running
+<system time   16>  process    5 is running
+<system time   17>  process    5 is running
+<system time   18>  process    5 is running
+<system time   19>  process    5 is running
+<system time   20>  process    5 has finished......
+<system time   20>  process    6 is running
+<system time   21>  process    6 is running
+<system time   22>  process    6 is running
+<system time   23>  process    6 is running
+<system time   24>  process    6 has finished......
+<system time   24>  All processes finished.........
+
+============================================================
+Average CPU Usage: 100.00%
+Average Waiting Time: 8.17
+Average Response Time: 8.17
+Average Turnaround Time: 12.17
+============================================================
+
+============================================== [ RR (TQ: 3) ] ==============================================
+
+Scheduling Algorithm: RR (Time Quantum: 3)
+6 total tasks read from "myTest.1". Press 'enter' to start...
+============================================================
+<system time    0>  process    1 is running
+<system time    1>  process    1 is running
+<system time    2>  process    1 is running
+<system time    3>  process    2 is running
+<system time    4>  process    2 is running
+<system time    5>  process    2 is running
+<system time    6>  process    3 is running
+<system time    7>  process    3 is running
+<system time    8>  process    3 is running
+<system time    9>  process    3 has finished......
+<system time    9>  process    4 is running
+<system time   10>  process    4 has finished......
+<system time   10>  process    1 is running
+<system time   11>  process    1 is running
+<system time   12>  process    1 has finished......
+<system time   12>  process    5 is running
+<system time   13>  process    5 is running
+<system time   14>  process    5 is running
+<system time   15>  process    6 is running
+<system time   16>  process    6 is running
+<system time   17>  process    6 is running
+<system time   18>  process    2 is running
+<system time   19>  process    2 is running
+<system time   20>  process    2 is running
+<system time   21>  process    2 has finished......
+<system time   21>  process    5 is running
+<system time   22>  process    5 is running
+<system time   23>  process    5 has finished......
+<system time   23>  process    6 is running
+<system time   24>  process    6 has finished......
+<system time   24>  All processes finished.........
+
+============================================================
+Average CPU Usage: 100.00%
+Average Waiting Time: 9.83
+Average Response Time: 4.83
+Average Turnaround Time: 13.83
+============================================================
+
+================================================ [ SRTF ] ================================================
+
+Scheduling Algorithm: SRTF
+6 total tasks read from "myTest.1". Press 'enter' to start...
+============================================================
+<system time    0>  process    1 is running
+<system time    1>  process    1 is running
+<system time    2>  process    1 is running
+<system time    3>  process    4 is running
+<system time    4>  process    4 has finished......
+<system time    4>  process    1 is running
+<system time    5>  process    1 is running
+<system time    6>  process    1 has finished......
+<system time    6>  process    3 is running
+<system time    7>  process    3 is running
+<system time    8>  process    3 is running
+<system time    9>  process    3 has finished......
+<system time    9>  process    6 is running
+<system time   10>  process    6 is running
+<system time   11>  process    6 is running
+<system time   12>  process    6 is running
+<system time   13>  process    6 has finished......
+<system time   13>  process    5 is running
+<system time   14>  process    5 is running
+<system time   15>  process    5 is running
+<system time   16>  process    5 is running
+<system time   17>  process    5 is running
+<system time   18>  process    5 has finished......
+<system time   18>  process    2 is running
+<system time   19>  process    2 is running
+<system time   20>  process    2 is running
+<system time   21>  process    2 is running
+<system time   22>  process    2 is running
+<system time   23>  process    2 is running
+<system time   24>  process    2 has finished......
+<system time   24>  All processes finished.........
+
+============================================================
+Average CPU Usage: 100.00%
+Average Waiting Time: 5.67
+Average Response Time: 5.50
+Average Turnaround Time: 9.67
+============================================================

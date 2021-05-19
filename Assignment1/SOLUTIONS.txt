@@ -1,0 +1,74 @@
+1. What is the CPU model name?
+    Answer:
+    Intel(R) Xeon(R) Silver 4210 CPU @ 2.20GHz
+
+    How I got it:
+    Running the "cat /proc/cpuinfo" command prints the cpuinfo file to the console. Inside this file their is an entry for CPU model name.
+
+2. What version of the Linux Kernel is being used?
+    Answer:
+    Linux version 2.6.32-754.24.3.el6.i686
+
+    How I got it:
+    Running the "cat /proc/version" command prints kernel information on the host system. The first entry is the exact kernel version.
+
+3. How long (in days, hours, and minutes) has it been since the system was last booted?
+    Answer: 
+    276 days, 23 hours, and 32 minutes (ran at 1:37pm on 9/26)
+
+    How I got it:
+    Running the "cat /proc/uptime" will print the number of seconds since system boot in the first number. Some math can be done on this
+    value to convert it to days, hours, and minutes.
+
+4. How much of the total CPU time has been spent executing in user mode? System mode? Idle?
+    Answer: 
+    331,711.56 seconds in User Mode, 154,048.83 seconds in System Mode, 21,474,836.48 seconds Idle (ran at 1:41pm on 9/26)
+
+    NOTE: Original value was divided by the system variable _SC_CLK_TCK to convert to seconds
+
+    How I got it:
+    Running the "cat /proc/stat" command prints basic information about the host system. Inside this file, in the CPU line is aggregated
+    time values for all CPUs. This is organized into columns with each value defining the time spent in that mode listed as follows:
+    (normal process in user mode, niced processes in user mode, system proccesses in kernel mode, idle time). Each value is reported in Jiffies
+    or USER_HZ typically 1/100th of a second in most Linux enviroments (we can convert this value to seconds by dividing it by the system variable
+    _SC_CLK_TCK). Note, the amount of time in each mode could exceed uptime due to each CPU core having its own unique values.
+
+5. How much memory is configured into it?
+    Answer: 
+    8180520 kB
+
+    How I got it:
+    Running the "cat /proc/meminfo" command prints memory information for the host system to the console. The first line in this file is
+    memTotal which defines the total memory installed in the system in kilobytes.
+
+6. How much memory is currently available in it?
+    Answer: 
+    4372112 kB (ran at 1:52pm on 9/26)
+
+    How I got it:
+    Running the "cat /proc/meminfo" command prints memory information for the host system to the console. The second line in this file is
+    memFree which the defines the total amount of memory free at read time listed in kilobytes.
+
+7. How many disk read/write requests have been made?
+    Answer: 
+    35,715,517 reads completed and 95,835,278 writes completed (ran at 1:54pm on 9/26)
+
+    How I got it:
+    Running the "cat /proc/diskstats" command prints disk information for the host system to the console. The total number of reads can be found
+    by adding up the value in the 4th column for each device listed, the total number of writes can be found by adding up the value in the 8th column
+    for each device listed. Note, HDD devices are listed as sd devices in Linux. In this file, each partition for a given drive is listed, the top
+    line gives aggregated values across all partitions.
+
+8. How many context switches has the kernel performed?
+    Answer: 5,594,091,199 (ran at 1:58pm on 9/26)
+
+    How I got it:
+    Running the "cat /proc/stat" command prints basic device info for the host system to the console. The line labeled "ctxt" lists the number of
+    context switches performed on all CPUs.
+
+9. How many processes have been created since the system was booted?
+    Answer: 51,304,488 (ran at 1:58pm on 9/26)
+
+    How I got it:
+    Running the "cat /proc/stat" command prints basic device info for the host system to the console. The line labeled "processes" lists the 
+    number of processes/threads created.
